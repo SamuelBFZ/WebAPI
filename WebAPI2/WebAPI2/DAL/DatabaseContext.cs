@@ -2,7 +2,6 @@
 using Microsoft.EntityFrameworkCore.Scaffolding.Metadata;
 using System.Security.Cryptography.X509Certificates;
 using WebAPI2.DAL.Entities;
-using WebAPI2.DAL.Entities;
 
 namespace WebAPI2.DAL
 {
