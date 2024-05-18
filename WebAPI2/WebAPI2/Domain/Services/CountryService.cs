@@ -90,7 +90,7 @@ namespace WebAPI2.Domain.Services
             {
                 var country = await GetCountryByIdAsync(id);//utilizo el metodo para buscar el id
 
-                if (country != null)//controlamos que en caso de que el id sea incorrecto o no exista
+                if (country == null)//controlamos que en caso de que el id sea incorrecto o no exista
                 {
                     return null;
                 }
