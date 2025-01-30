@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "transform duration to text", "transform duration to text\transform duration to text.csproj", "{29656C31-CDD3-4B53-BFDD-D343942A44E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29656C31-CDD3-4B53-BFDD-D343942A44E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29656C31-CDD3-4B53-BFDD-D343942A44E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29656C31-CDD3-4B53-BFDD-D343942A44E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29656C31-CDD3-4B53-BFDD-D343942A44E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C582199-258F-473B-B0AE-BF63E9127C8F}
+	EndGlobalSection
+EndGlobal
