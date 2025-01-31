@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Threading;
 using WebAPI.DAL.Entities;
 using WebAPI.Domain.Interfaces;
 
@@ -13,8 +14,8 @@ namespace WebAPI.Controllers
             _barberService = barberService;
         }
 
-        [HttpGet, ActionName ("Get")]
-        [Route("Get")]
+        [HttpGet, ActionName ("GetAll")]
+        [Route("GetAll")]
         public async Task<ActionResult<IEnumerable<Barber>>> GetBarbersAsync()
         {
             var barber = await _barberService.GetBarbersAsync();
@@ -43,6 +44,35 @@ namespace WebAPI.Controllers
         {
                 var createdBarber = await _barberService.CreateBarberAsync(barber);
                 return Ok(createdBarber);            
+        }
+        
+        [HttpPut, ActionName("Update")]
+        [Route("Update")]
+        public async Task<ActionResult> UpdateBarberAsync(Barber barber)
+        {
+
+            Guid emptyGuid = Guid.Empty;
+
+            if (barber.Id.Equals(emptyGuid)) return BadRequest("Must provide an ID to update");
+
+            var updatedBarber = await _barberService.UpdateBarberAsync(barber);
+            return Ok(updatedBarber);
+        }
+
+        [HttpDelete, ActionName("Delete")]
+        [Route("Delete")]
+        public async Task<ActionResult> DeleteBarberAsync(Guid id)
+        {
+            Guid emptyGuid = Guid.Empty;
+
+            if (id.Equals(emptyGuid)) return BadRequest("Must provide an ID to delete");
+
+            var deletedBarber = await _barberService.DeleteBarberAsync(id);
+
+            if (deletedBarber == null) return NotFound("Barber ID not found");
+
+            return Ok($"{deletedBarber.Firstname} deleted");
+
         }
     }
 }

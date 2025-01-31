@@ -7,7 +7,7 @@ namespace WebAPI.DAL.Entities
     {
         [Key]
         [JsonIgnore]
-        public virtual Guid Id {  get; set; }
+        public virtual Guid Id {  get; set; } = Guid.Empty;
         [JsonIgnore]
         public virtual DateTime? CreatedDate { get; set; } //para guardar todo registro nuevo con su date
         [JsonIgnore]
